@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="telephone=no" name="format-detection">
+<meta http-equiv="x-rim-auto-match" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<link rel="stylesheet" href="../css/all.css"/>
+<link rel="stylesheet" href="../css/mall.css"/>
+<link rel="stylesheet" href="../js/swiper/css/swiper.css"/>
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+<style>
+html,body { width:100%; height:100%; }
+.fixed-nav { display:none; }
+.page-header { background-color:transparent !important; color:#24211B !important; }
+.page-header a { color:#24211B !important; }
+body { padding:0 !important; }
+</style>
+</head>
+<body class="container-fluid">
+	<!-- 头部组件 -->
+    <header class="page-header">
+    	<a class="glyphicon glyphicon-menu-left back_btn" href="javascript:history.go(-1);"></a>
+        <h1>惠币抽奖</h1>
+    </header>
+    
+    <!-- 固定导航 -->
+    <div class="row fixed-nav">
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>首页</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>发现</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>消息</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>我的</span></a></div>
+    </div>
+    
+    <div class="row draw_wrap">
+		<img src="../images/mall/draw_bg.png" class="img-responsive draw_bg"/>
+        <div class="row draw_box">
+            <div class="draw" id="dialBox">
+                <img src="../images/mall/draw_con.png"/>
+                <img src="../images/mall/draw.png" class="rotator"/>
+            </div>
+            <div class="row text_conten">
+                <img src="../images/mall/text_bg.png" class="img-responsive"/>
+                <div class="font_list">
+                    <h2>活动规则</h2>
+                    <p>
+                    	抽奖规则：<br/>
+                    	每次抽奖将消耗5惠币，每天可抽5次 <br/>
+                        奖品派发： <br/>
+                        1、惠币奖励中奖后自动充值到您的个人中心账户。 <br/>
+                        2、实物奖励中奖后将以邮寄的方式派送。 <br/>
+                        3、中奖后如需邮寄，快递费则有中奖者承担，且奖品数量有限，请在截止日期前尽快完成兑换。 <br/>
+                        4、以下为兑换方式，请仔细阅读： <br/>
+                         （PC端）：个人中心→兑换中心→我要兑换，确认配送地址后领取礼品 <br/>
+                         （APP端）：我的个人中心→会员信息→我的钱包→抽奖记录→兑换 <br/>
+                        确认配送地址后领取奖品。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/jQueryRotate.2.2.js"></script>
+<script>
+	var _this = 5;	//每次抽奖所花惠币
+	var _all = 10;	//用户剩余惠币
+	var aline = 5;	//剩余抽奖次数
+	$("#dialBox").click(function(){
+		if( !$("#dialBox").hasClass('disabled') ){
+			if( aline>0 ){
+				if( _all>=_this ){
+					ap_alert("今日还有"+aline+"次抽奖机会！",'本次抽奖，将消耗5惠币','draw');
+					/*var html = "<div class='row bounced'>"
+						+"<div class='row mask_layer' onClick='draw_back($(this))'></div>"
+						+"<div class='bounced_con'>"
+						+"<h2>今日还有"+aline+"次抽奖机会！</h2>"
+						+"<p>本次抽奖，将消耗5惠币</p>"
+						+"<a href='javascript:void(0);' class='play_draw' onClick='draw_go($(this))'>确定</a>"	
+						+"</div>"
+						+"</div>";
+					$(document).find('body').append(html);*/
+				} else {
+					ap_alert('您的惠币已不足！');
+				}	
+			} else {
+				ap_alert('今日抽奖次数已完！');
+			}	
+		}
+		
+	});
+function ap_alert(str,str2,evs){
+	if( str2 ){
+		if( evs ){
+			var html = "<div class='row bounced'>"
+						+"<div class='row mask_layer' onClick='draw_back($(this))'></div>"
+						+"<div class='bounced_con'>"
+						+"<h2>"+str+"</h2>"
+						+"<p>"+str2+"</p>"
+						+"<a href='javascript:void(0);' class='play_draw' onClick='draw_go($(this))'>确定</a>"
+						+"</div>"
+						+"</div>";
+		} else {
+			var html = "<div class='row bounced'>"
+						+"<div class='row mask_layer' onClick='draw_back($(this))'></div>"
+						+"<div class='bounced_con'>"
+						+"<h2>"+str+"</h2>"
+						+"<p>"+str2+"</p>"
+						+"<a href='javascript:void(0);' class='play_draw' onClick='draw_back($(this))'>确定</a>"
+						+"</div>"
+						+"</div>";
+		}
+	} else {
+		var html = "<div class='row bounced'>"
+				+"<div class='row mask_layer' onClick='draw_back($(this))'></div>"
+				+"<div class='bounced_con'>"
+				+"<h2>"+str+"</h2>"
+				+"<a href='javascript:void(0);' class='play_draw' onClick='draw_back($(this))'>确定</a>"
+				+"</div>"
+				+"</div>";
+	}
+	$(document).find('body').append(html);
+};
+	
+function draw_go(obj){
+	_all -= _this;
+	aline -= 1;
+	obj.parents('.bounced').remove();
+	// 后台算出数字方法，此处调用
+	var re = Math.floor(Math.random()*5);
+	funRotateDial(re);
+	if( re==1 ){ _all += 10; };
+	if( re==4 ){ _all += 10; };
+};
+
+function draw_back(obj){
+	obj.parents('.bounced').remove();
+};
+
+function funDialResult(){
+	var dialResult=[
+		{angle:function(){
+			var angleArray=[44,132,220,308];
+			var re=Math.floor(Math.random()*4);
+			return angleArray[re];
+		}(),type:0},		//谢谢参与
+		{angle:88,type:1},	//10积分
+		{angle:176,type:2},	//大礼包
+		{angle:264,type:3},	//大礼包
+		{angle:352,type:4}	//10积分
+	];
+	return dialResult;   
+};
+function funRotateDial(re){
+	if( !$("#dialBox").hasClass('disabled') ){
+		$("#dialBox").addClass('disabled');
+		var dr=funDialResult();
+		$("#dialBox").find('.rotator').rotate({
+			angle:0, 
+			duration: 5000,
+			animateTo: dr[re].angle+360*5, 
+			callback:function(){
+				if( re==0 ){ //alert("谢谢参与");
+					ap_alert('谢谢参与');
+				}
+				if( re==1 ){ //alert("恭喜获得10积分");
+					ap_alert('恭喜获得10积分','积分已到账，请查看');
+				}
+				if( re==2 ){ //alert("恭喜获得大礼包");
+					ap_alert('恭喜获得大礼包','前往个人中心查看');
+				}
+				if( re==3 ){ //alert("恭喜获得大礼包");
+					ap_alert('恭喜获得大礼包','前往个人中心查看');
+				}
+				if( re==4 ){ //alert("恭喜获得10积分");
+					ap_alert('恭喜获得10积分','积分已到账，请查看');
+				}
+				$("#dialBox").removeClass('disabled');
+			}
+		});
+	};
+
+};
+</script>
+</html>

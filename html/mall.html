@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="telephone=no" name="format-detection">
+<meta http-equiv="x-rim-auto-match" content="none">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<link rel="stylesheet" href="../css/bootstrap.css"/>
+<link rel="stylesheet" href="../css/all.css"/>
+<link rel="stylesheet" href="../css/mall.css"/>
+<link rel="stylesheet" href="../js/swiper/css/swiper.css"/>
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+<style>
+.fixed-nav { display:none; }
+body { padding-bottom:2px !important; }
+</style>
+</head>
+<body class="container-fluid">
+	<!-- 头部组件 -->
+    <header class="page-header">
+    	<a class="glyphicon glyphicon-menu-left back_btn" href="javascript:history.go(-1);"></a>
+        <h1>惠币商城</h1>
+    </header>
+    
+    <!-- 固定导航 -->
+    <div class="row fixed-nav">
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>首页</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>发现</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>消息</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><i></i><span>我的</span></a></div>
+    </div>
+    <!-- banner -->
+    <div class="row">
+        <div class="banner col-sm-12 col-md-12 col-xs-12">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="#"><img src="../images/mall/banner.png" class="img-responsive"/></a></li>
+                <li class="swiper-slide"><a href="#"><img src="../images/mall/banner.png" class="img-responsive"/></a></li>
+                <li class="swiper-slide"><a href="#"><img src="../images/mall/banner.png" class="img-responsive"/></a></li>
+                <li class="swiper-slide"><a href="#"><img src="../images/mall/banner.png" class="img-responsive"/></a></li>
+                <li class="swiper-slide"><a href="#"><img src="../images/mall/banner.png" class="img-responsive"/></a></li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+    <!-- 无名菜单 -->
+    <div class="row nav_huibi">
+    	<div class="col-sm-3 col-md-3 col-xs-3"><a href="javascript:void(0);" class="sign_in"><img src="../images/mall/sing_in.png"/><span>签到</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="get_mall.html"><img src="../images/mall/z_mall.png"/><span style="padding-top:7px;">赚惠币</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="see_mall.html"><img src="../images/mall/s_mall.png"/><span>查惠币</span></a></div>
+        <div class="col-sm-3 col-md-3 col-xs-3"><a href="#"><img src="../images/mall/t_new.png"/><span>今日上新</span></a></div>
+    </div>
+	
+    <!-- 签到 -->
+    <div class="row sign_box">
+    	<div class="mask_layer"></div>
+		<div class="checkin"></div>
+    </div>
+    
+    <!-- 常用入口 -->
+    <div class="row com-ent">
+        <h2>常用入口</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-xs-6 com-list">
+                <a href="#">
+                    <img src="../images/mall/1&mall.png" class="img-responsive"/>
+                    <div class="text_list">
+                        <strong>一元加惠币</strong>
+                        <span>超多商品等你选</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 com-list">
+                <a href="#">
+                    <img src="../images/mall/o_mall.png" class="img-responsive"/>
+                    <div class="text_list">
+                        <strong>全惠币</strong>
+                        <span>万件商品只需惠币</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 com-list">
+                <a href="#">
+                    <img src="../images/mall/cash&mall.png" class="img-responsive"/>
+                    <div class="text_list">
+                        <strong>现金加惠币</strong>
+                        <span>超多折扣天天好礼</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 com-list">
+                <a href="#">
+                    <img src="../images/mall/j_mall.png" class="img-responsive"/>
+                    <div class="text_list">
+                        <strong>小惠币&nbsp;&nbsp;抽大奖</strong>
+                        <span>超多好礼等你来抽</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 热门商品 -->
+    <div class="row hot-com">
+    	<div class="row">
+        	<h2 class="col-sm-10 col-md-10 col-xs-10">热门商品</h2>
+            <a class="col-sm-2 col-md-2 col-xs-2" href="#" title="more" style="padding:0; line-height:36px; color:#B63919;">更多 ></a>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-xs-6 hot-list">
+                <a href="#">
+                	<img src="../images/mall/red_wine.png" class="img-responsive"/>
+                    <strong>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</strong>
+                    <span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+                    <div class="row buy_way">
+                    	<div class="col-sm-8 col-md-8 col-xs-8">100惠币</div>
+                    	<div class="col-sm-4 col-md-4 col-xs-4 text-center"><p>抽奖</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 hot-list">
+                <a href="#">
+                	<img src="../images/mall/red_wine.png" class="img-responsive"/>
+                    <strong>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</strong>
+                    <span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+                    <div class="row buy_way">
+                    	<div class="col-sm-8 col-md-8 col-xs-8">100惠币</div>
+                    	<div class="col-sm-4 col-md-4 col-xs-4 text-center"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 hot-list">
+                <a href="#">
+                	<img src="../images/mall/red_wine.png" class="img-responsive"/>
+                    <strong>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</strong>
+                    <span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+                    <div class="row buy_way">
+                    	<div class="col-sm-8 col-md-8 col-xs-8">100惠币</div>
+                    	<div class="col-sm-4 col-md-4 col-xs-4 text-center"><p>抽奖</p></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 hot-list">
+                <a href="#">
+                	<img src="../images/mall/red_wine.png" class="img-responsive"/>
+                    <strong>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</strong>
+                    <span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+                    <div class="row buy_way">
+                    	<div class="col-sm-8 col-md-8 col-xs-8">100惠币</div>
+                    	<div class="col-sm-4 col-md-4 col-xs-4 text-center"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 hot-list">
+                <a href="#">
+                	<img src="../images/mall/red_wine.png" class="img-responsive"/>
+                    <strong>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</strong>
+                    <span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+                    <div class="row buy_way">
+                    	<div class="col-sm-8 col-md-8 col-xs-8">100惠币</div>
+                    	<div class="col-sm-4 col-md-4 col-xs-4 text-center"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 hot-list">
+                <a href="#">
+                	<img src="../images/mall/red_wine.png" class="img-responsive"/>
+                    <strong>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</strong>
+                    <span>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+                    <div class="row buy_way">
+                    	<div class="col-sm-8 col-md-8 col-xs-8">100惠币</div>
+                    	<div class="col-sm-4 col-md-4 col-xs-4 text-center"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 限时专题 -->
+    <div class="row com-ent">
+        <h2>限时专题</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-xs-12 com-list"><a href="#"><img src="../images/mall/special.png" class="img-responsive"/></a></div>
+        </div>
+    </div>
+    
+	<!-- 热门分类 -->
+    <div class="row hot-com">
+        <h2>热门分类</h2>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 hot-list hot-lists">
+            	<a href="#">
+                	<strong>时尚/流行</strong>
+                    <span>Hi panda、HQ</span>
+                	<img src="../images/mall/fashion.png" class="img-responsive"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+	<!-- 惠币游戏 -->
+    <div class="row com-ent">
+        <h2>惠币游戏</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-xs-6 com-list"><a href="draw_mall.html"><img src="../images/mall/dowrs.png" class="img-responsive"/></a></div>
+            <div class="col-sm-6 col-md-6 col-xs-6 com-list"><a href="sweepstakes.html"><img src="../images/mall/winning.png" class="img-responsive"/></a></div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/swiper/js/swiper.js"></script>
+<script src="../js/index.js"></script>
+<script> 
+$(function(){
+    var bannerslide = new Swiper('.banner', {
+        loop : true,
+        pagination : '.swiper-pagination',
+        paginationClickable : true,
+        autoplayDisableOnInteraction : false,
+        autoplay: 3500
+    });
+	$('.checkin').Checkin1();
+	
+	$('.sign_in').click(function(){
+		$('.sign_box').show();
+		$('.checkin').Checkin();
+		$('.checkin').css('marginTop',parseInt(($(window).innerHeight()-$(".checkin").outerHeight())/2)-20+'px');
+	});
+	$(window).resize(function(){
+		$('.checkin').css('marginTop',parseInt(($(window).innerHeight()-$(".checkin").outerHeight())/2)-20+'px');
+	});
+	$('.mask_layer').click(function(event){
+		$(this).parent().hide();
+	});
+});
+</script>
+</html>
